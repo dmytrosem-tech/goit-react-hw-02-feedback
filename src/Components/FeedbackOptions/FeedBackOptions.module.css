@@ -17,7 +17,3 @@
     0px 4px 4px rgba(47, 96, 233, 0.06), 1px 4px 6px rgba(52, 95, 238, 0.16);
   cursor: pointer;
 }
-
-.button:last-child {
-  margin-bottom: 0;
-}

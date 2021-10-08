@@ -11,12 +11,14 @@ export default function Title({
   total,
   positivePercentage,
   textObj,
+  options,
 }) {
+  const { section, title, title2 } = styles;
   return (
-    <section className={styles.section}>
-      <h1 className={styles.title}>{textObj.grandTitleTxt}</h1>
-      <FeedbackOptions onLeaveFeedback={onLeaveFeedback} />
-      <h2 className={styles.title2}>{textObj.titleTxt}</h2>
+    <section className={section}>
+      <h1 className={title}>{textObj.grandTitleTxt}</h1>
+      <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback} />
+      <h2 className={title2}>{textObj.titleTxt}</h2>
       {good || neutral || bad ? (
         <Statistics
           good={good}

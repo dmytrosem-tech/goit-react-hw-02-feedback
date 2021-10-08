@@ -15,27 +15,28 @@ export default function Statistics({
     positivePercentageContent,
   },
 }) {
+  const { statistics, stat__text, stat__value } = styles;
   return (
-    <div className={styles.statistics}>
-      <p className={styles.stat__text}>
+    <div className={statistics}>
+      <p className={stat__text}>
         {goodContent}
-        <span className={styles.stat__value}>{good}</span>
+        <span className={stat__value}>{good}</span>
       </p>
-      <p className={styles.stat__text}>
+      <p className={stat__text}>
         {neutralContent}
-        <span className={styles.stat__value}>{neutral}</span>
+        <span className={stat__value}>{neutral}</span>
       </p>
-      <p className={styles.stat__text}>
+      <p className={stat__text}>
         {badContent}
-        <span className={styles.stat__value}>{bad}</span>
+        <span className={stat__value}>{bad}</span>
       </p>
-      <p className={styles.stat__text}>
+      <p className={stat__text}>
         {totalContent}
-        <span className={styles.stat__value}>{total}</span>
+        <span className={stat__value}>{total}</span>
       </p>
-      <p className={styles.stat__text}>
+      <p className={stat__text}>
         {positivePercentageContent}
-        <span className={styles.stat__value}>{positivePercentage}</span>
+        <span className={stat__value}>{positivePercentage}</span>
       </p>
     </div>
   );
@@ -52,9 +53,9 @@ Statistics.defaultProps = {
 };
 
 Statistics.propTypes = {
-  goodContent: PropTypes.number,
-  neutralContent: PropTypes.number,
-  badContent: PropTypes.number,
-  totalContent: PropTypes.number,
-  positivePercentageContent: PropTypes.string,
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.string,
 };

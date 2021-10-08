@@ -1,6 +1,6 @@
 import "./index.css";
 import { Component } from "react";
-import Title from "./Components/Title/Title";
+import Title from "./Components/Title";
 
 const text = {
   grandTitleTxt: "Please leave feedback",
@@ -37,16 +37,16 @@ export default class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const { onLeaveFeedback } = this;
     return (
       <Title
-        onLeaveFeedback={onLeaveFeedback}
+        onLeaveFeedback={this.onLeaveFeedback}
         total={this.countTotalFeedback()}
         positivePercentage={this.countPositiveFeedbackPercentage()}
         good={good}
         neutral={neutral}
         bad={bad}
         textObj={text}
+        options={Object.keys(this.state)}
       />
     );
   }
